@@ -17,5 +17,10 @@ public class Water extends Item implements ICountItem{
         return 0;
     }
 
+    @Override
+    public String toString() {
+        return "WOter: "+ getName() + " , price per KG: "+getItemPrice() + Main.formatPrice(getItemPrice());
+
+    }
 
 }

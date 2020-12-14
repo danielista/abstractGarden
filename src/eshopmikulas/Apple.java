@@ -28,5 +28,10 @@ public class Apple extends Item implements ICountItem, IWeightItem{
         return weight*getPrice();
     }
 
+    @Override
+    public String toString() {
+        return "Apple: "+ getName() + " , price per KG: "+getItemPrice()+
+        " weight: "+weight +"kg , price: " + Main.formatPrice(getItemPrice()) ;
 
+    }
 }

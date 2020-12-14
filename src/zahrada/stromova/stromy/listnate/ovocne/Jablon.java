@@ -17,4 +17,9 @@ public class Jablon extends Strom {
     public void getFruit() {
         System.out.println("mam chutnučke jablcka kamarad");
     }
+
+    @Override
+    public String toString() {
+        return ("aaa sladka jablon je tu");
+    }
 }
