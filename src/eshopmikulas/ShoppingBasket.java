@@ -24,8 +24,11 @@ public class ShoppingBasket {
         list.add(newItem);
     }
     public int getCountOfItemsInCart(){
+
         return list.size();
     }
+
+
     public double getTotalPrice(){
         double total = 0;
         for (Item temp:list){
