@@ -93,24 +93,24 @@ public class Main {
 
             Document document = documentBuilder.newDocument();
 
-            // root element
-            Element root = document.createElement("bill");
-            document.appendChild(root);
+            // bill element
+            Element bill = document.createElement("bill");
+            document.appendChild(bill);
 
 
             Element date2 = document.createElement("date");
             date2.appendChild(document.createTextNode(strDate));
-            root.appendChild(date2);
+            bill.appendChild(date2);
 
 
             Element time2 = document.createElement("time");
             time2.appendChild(document.createTextNode(strTime));
-            root.appendChild(time2);
+            bill.appendChild(time2);
 
             // items element
             Element items = document.createElement("items");
 
-            root.appendChild(items);
+            bill.appendChild(items);
 
             // set an attribute to staff element
             Attr attr = document.createAttribute("counts");
@@ -139,6 +139,11 @@ public class Main {
             Element department = document.createElement("department");
             department.appendChild(document.createTextNode("Human Resources"));
             items.appendChild(department);
+
+            Element totalprice2 = document.createElement("totalPrice");
+            totalprice2.appendChild(document.createTextNode(String.valueOf(totalPrice)));
+            bill.appendChild(totalprice2);
+
 
             // create the xml file
             //transform the DOM Object to an XML File
